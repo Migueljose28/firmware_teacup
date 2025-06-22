@@ -1,0 +1,24 @@
+*.pyc
+*.hex
+*.elf
+build
+*~
+
+private/
+temporal.png
+temporal_data
+config.h
+thermistortable.h
+Makefile
+sim
+doc
+datalog.out
+configtool.ini
+tags
+
+# Atmel Studio project files.
+.vs/
+*.atsln
+*.atsuo
+*.componentinfo.xml
+*.cproj

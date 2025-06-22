@@ -1,0 +1,50 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Sun Nov 27 14:06:58 2016
+[*]
+[dumpfile] "/home/mah/RepRap/Teacup_Firmware/testcases/short-moves.processed.vcd"
+[dumpfile_mtime] "Sun Nov 27 12:09:59 2016"
+[dumpfile_size] 165535
+[savefile] "/home/mah/RepRap/Teacup_Firmware/testcases/save-file-velocities.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 266 225
+*-29.874165 730551150 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Steppers.
+[sst_width] 206
+[signals_width] 157
+[sst_expanded] 1
+[sst_vpaned_height] 163
+@28
+Steppers.X_step
+@88024
+Steppers.X_steps/s
+@20000
+-
+-
+-
+-
+@24
+Steppers.X_mm/min
+@420
+Steppers.X_pos_steps
+@200
+-
+-
+@20000
+-
+@28
+Steppers.Y_step
+@88025
+Steppers.Y_steps/s
+@20000
+-
+-
+-
+-
+@24
+Steppers.Y_mm/min
+@420
+Steppers.Y_pos_steps
+[pattern_trace] 1
+[pattern_trace] 0
