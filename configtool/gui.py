@@ -580,7 +580,7 @@ class ConfigFrame(wx.Frame):
         )
 
     def onReportProblem(self, evt):
-        import urllib
+        import urllib.parse
         import webbrowser
         import subprocess
         from sys import platform
@@ -618,11 +618,11 @@ class ConfigFrame(wx.Frame):
 
             url = (
                 "mailto:"
-                + urllib.quote(mailRecipients)
+                + urllib.parse.quote(mailRecipients)
                 + "?subject="
-                + urllib.quote(mailSubject)
+                + urllib.parse.quote(mailSubject)
                 + "&body="
-                + urllib.quote(mailBody)
+                + urllib.parse.quote(mailBody)
             )
 
         # This is a work around a bug in gvfs-open coming with (at least) Ubuntu
@@ -664,7 +664,7 @@ class ConfigFrame(wx.Frame):
         #
         # Most recent commiters are in the .mailmap
         self.message(
-            "Teacup Firmware is a 3D Printer and CNC machine controlling "
+           "Teacup Firmware is a 3D Printer and CNC machine controlling "
             "firmware with emphasis on performance, efficiency and "
             "outstanding quality. What Teacup does, shall it do very well."
             "\n\n\n"
@@ -678,12 +678,12 @@ class ConfigFrame(wx.Frame):
             "    David Forrest  (27 commits)\n"
             "    Jim McGee  (15 commits)\n"
             "    Ben Jackson  (12 commits)\n"
-            "    Robert Konklewski  (12 commits)\n"
-            "About Teacup",
+            "    Robert Konklewski  (12 commits)\n", 
+            title="About Teacup",
             style=wx.OK,
         )
 
-    def message(self, text, title, style=wx.OK + wx.ICON_ERROR):
+    def message(self, text: str, title: str, style=wx.OK + wx.ICON_ERROR):
         dlg = wx.MessageDialog(self, text, title, style)
         dlg.ShowModal()
         dlg.Destroy()

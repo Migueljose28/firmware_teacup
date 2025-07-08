@@ -20,7 +20,7 @@ void analog_init() {
 		#ifdef	PRR
 			PRR &= ~MASK(PRADC);
 		#elif defined PRR0
-			PRR0 &= ~MASK(PRADC);
+                PRR0 &= ~MASK(PRADC);
 		#endif
 
 		// select reference signal to use, set right adjusted results and select ADC input 0

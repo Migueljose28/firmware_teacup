@@ -45,8 +45,8 @@
 *                                                                           *
 \***************************************************************************/
 
-//#define TX_ENABLE_PIN            xxxx
-//#define RX_ENABLE_PIN            xxxx
+#define TX_ENABLE_PIN            DIO12
+#define RX_ENABLE_PIN            DIO13
 
 #define X_STEP_PIN               DIO2
 #define X_DIR_PIN                DIO5
@@ -243,9 +243,8 @@ DEFINE_TEMP_SENSOR(extruder, TT_THERMISTOR, AIO3,  THERMISTOR_EXTRUDER)
 */
 
 //DEFINE_HEATERS_START
-
-//            name      pin      invert  pwm      max_pwm
-DEFINE_HEATER(extruder, AIO2,    0,      1,       100)
+//            name      pin      invert  pwm     max_pwm
+DEFINE_HEATER(extruder, AIO2,    0,      1,     100)
 
 #define HEATER_EXTRUDER HEATER_extruder
 //DEFINE_HEATERS_END
@@ -262,7 +261,7 @@ DEFINE_HEATER(extruder, AIO2,    0,      1,       100)
   115200, other common values are 19200, 38400 or 57600. Ignored when USB_SERIAL
   is defined.
 */
-#define BAUD                     115200
+#define BAUD                     57600
 
 /** \def XONXOFF
   Xon/Xoff flow control.

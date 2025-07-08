@@ -32,18 +32,18 @@
 
     Valid range: 20 to 4'0960'000 (0.02 to 40960 steps/mm)
 */
-#define STEPS_PER_M_X            79000
-#define STEPS_PER_M_Y            79000
-#define STEPS_PER_M_Z            3194000
-#define STEPS_PER_M_E            96271
+#define STEPS_PER_M_X            55000
+#define STEPS_PER_M_Y            55000
+#define STEPS_PER_M_Z            55000
+#define STEPS_PER_M_E            55000
 
 /** \def MAXIMUM_FEEDRATE_X MAXIMUM_FEEDRATE_Y MAXIMUM_FEEDRATE_Z MAXIMUM_FEEDRATE_E
   Used for G0 rapid moves and as a cap for all other feedrates.
 */
-#define MAXIMUM_FEEDRATE_X       1000
-#define MAXIMUM_FEEDRATE_Y       1000
-#define MAXIMUM_FEEDRATE_Z       200
-#define MAXIMUM_FEEDRATE_E       1000
+#define MAXIMUM_FEEDRATE_X       500
+#define MAXIMUM_FEEDRATE_Y       500
+#define MAXIMUM_FEEDRATE_Z       500
+#define MAXIMUM_FEEDRATE_E       2500
 
 /** \def SEARCH_FEEDRATE_X SEARCH_FEEDRATE_Y SEARCH_FEEDRATE_Z
   Used when doing precision endstop search and as default feedrate. No
@@ -73,9 +73,9 @@
     Sane values: 0 to 20000   (0 to 20 mm)
     Valid range: 0 to 1000000
 */
-#define ENDSTOP_CLEARANCE_X      1000
-#define ENDSTOP_CLEARANCE_Y      1000
-#define ENDSTOP_CLEARANCE_Z      100
+#define ENDSTOP_CLEARANCE_X      500
+#define ENDSTOP_CLEARANCE_Y      500
+#define ENDSTOP_CLEARANCE_Z      500
 
 /** \def X_MIN X_MAX Y_MIN Y_MAX Z_MIN Z_MAX
   Soft axis limits. Define them to your machine's size relative to what your
@@ -176,9 +176,9 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
     Sane values: 0 to 400
     Valid range: 0 to 65535
 */
-#define MAX_JERK_X               100
-#define MAX_JERK_Y               100
-#define MAX_JERK_Z               2
+#define MAX_JERK_X               200
+#define MAX_JERK_Y               200
+#define MAX_JERK_Z               0
 #define MAX_JERK_E               200
 
 /** \def BED_LEVELING
@@ -229,7 +229,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
 
   This option has no effect on controllers with a common stepper enable pin.
 */
-#define Z_AUTODISABLE
+//#define Z_AUTODISABLE
 
 /** \def TEMP_HYSTERESIS
   Actual temperature must be target +/- this hysteresis before target
@@ -269,7 +269,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
   With this disabled, only temps will be returned: ok T:xxx.x B:xxx.x
   Enabling adds 78 bytes to the image.
 */
-#define REPORT_TARGET_TEMPS
+//#define REPORT_TARGET_TEMPS
 
 /** \def HEATER_SANITY_CHECK
   Check if heater responds to changes in target temperature, disable and spit
@@ -296,12 +296,12 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
 /** \def BANG_BANG_ON
   PWM value for Bang Bang 'on'.
 */
-//#define BANG_BANG_ON             200
+#define BANG_BANG_ON             255
 
 /** \def BANG_BANG_OFF
   PWM value for Bang Bang 'off'.
 */
-//#define BANG_BANG_OFF            45
+#define BANG_BANG_OFF            40
 
 /** \def MOVEBUFFER_SIZE
   Move buffer size, in number of moves.
@@ -329,7 +329,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
   is probably even worse than just hanging, and there is no better restore
   code in place, this is disabled for now.
 */
-//#define USE_WATCHDOG
+#define USE_WATCHDOG
 
 /** \def TH_COUNT
   Temperature history count. This is how many temperature readings to keep in
