@@ -261,7 +261,7 @@ DEFINE_HEATER(extruder, AIO2,    0,      1,     100)
   115200, other common values are 19200, 38400 or 57600. Ignored when USB_SERIAL
   is defined.
 */
-#define BAUD                     57600
+#define BAUD                     115200
 
 /** \def XONXOFF
   Xon/Xoff flow control.

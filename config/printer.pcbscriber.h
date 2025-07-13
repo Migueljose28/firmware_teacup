@@ -32,10 +32,10 @@
 
     Valid range: 20 to 4'0960'000 (0.02 to 40960 steps/mm)
 */
-#define STEPS_PER_M_X            55000
-#define STEPS_PER_M_Y            55000
-#define STEPS_PER_M_Z            55000
-#define STEPS_PER_M_E            55000
+#define STEPS_PER_M_X            42666
+#define STEPS_PER_M_Y            42666
+#define STEPS_PER_M_Z            42666
+#define STEPS_PER_M_E            42666
 
 /** \def MAXIMUM_FEEDRATE_X MAXIMUM_FEEDRATE_Y MAXIMUM_FEEDRATE_Z MAXIMUM_FEEDRATE_E
   Used for G0 rapid moves and as a cap for all other feedrates.
@@ -99,7 +99,7 @@
 //#define Y_MAX                    200.0
 
 //#define Z_MIN                    0.0
-#define Z_MAX                    1000
+//#define Z_MAX                    1000
 
 /** \def E_ABSOLUTE
   Some G-code creators produce relative length commands for the extruder,
@@ -145,7 +145,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
     Units: mm/s^2
     Useful range: 1 to 10'000
 */
-#define ACCELERATION             100
+#define ACCELERATION             1000
 
 /** \def LOOKAHEAD
   Define this to enable look-ahead during *ramping* acceleration to smoothly
@@ -291,7 +291,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
   Drops PID loop from heater control, reduces code size significantly
   (1300 bytes!).
 */
-//#define BANG_BANG
+#define BANG_BANG
 
 /** \def BANG_BANG_ON
   PWM value for Bang Bang 'on'.
@@ -319,7 +319,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
   this value as the index or name. You probably also want to comment out
   E_STEP_PIN and E_DIR_PIN in the Pinouts section above.
 */
-//#define DC_EXTRUDER              HEATER_motor
+//#define DC_EXTRUDER              HEATER_extruder
 //#define DC_EXTRUDER_PWM          180
 
 /** \def USE_WATCHDOG
