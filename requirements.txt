@@ -1,0 +1,9 @@
+numpy @ file:///D:/bld/numpy_1749430510158/work/dist/numpy-2.3.0-cp313-cp313-win_amd64.whl#sha256=515b73e8a254ea18d9734ca080217482c77cf86f1fb170d75a65a7f4605f5a6f
+pillow @ file:///D:/bld/pillow_1746646257525/work
+platformdirs @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_platformdirs_1746710438/work
+psutil @ file:///D:/bld/psutil_1740663147070/work
+pyglet==2.1.8
+pyserial @ file:///home/conda/feedstock_root/build_artifacts/pyserial_1734140157046/work
+setuptools==80.9.0
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1733380938961/work
+wxPython==4.2.3

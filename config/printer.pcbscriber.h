@@ -32,17 +32,17 @@
 
     Valid range: 20 to 4'0960'000 (0.02 to 40960 steps/mm)
 */
-#define STEPS_PER_M_X            42666
-#define STEPS_PER_M_Y            42666
-#define STEPS_PER_M_Z            42666
-#define STEPS_PER_M_E            42666
+#define STEPS_PER_M_X            80000
+#define STEPS_PER_M_Y            80000
+#define STEPS_PER_M_Z            4000000
+#define STEPS_PER_M_E            100000
 
 /** \def MAXIMUM_FEEDRATE_X MAXIMUM_FEEDRATE_Y MAXIMUM_FEEDRATE_Z MAXIMUM_FEEDRATE_E
   Used for G0 rapid moves and as a cap for all other feedrates.
 */
 #define MAXIMUM_FEEDRATE_X       500
 #define MAXIMUM_FEEDRATE_Y       500
-#define MAXIMUM_FEEDRATE_Z       500
+#define MAXIMUM_FEEDRATE_Z       150
 #define MAXIMUM_FEEDRATE_E       2500
 
 /** \def SEARCH_FEEDRATE_X SEARCH_FEEDRATE_Y SEARCH_FEEDRATE_Z
@@ -73,9 +73,9 @@
     Sane values: 0 to 20000   (0 to 20 mm)
     Valid range: 0 to 1000000
 */
-#define ENDSTOP_CLEARANCE_X      500
-#define ENDSTOP_CLEARANCE_Y      500
-#define ENDSTOP_CLEARANCE_Z      500
+#define ENDSTOP_CLEARANCE_X      2000
+#define ENDSTOP_CLEARANCE_Y      2000
+#define ENDSTOP_CLEARANCE_Z      2000
 
 /** \def X_MIN X_MAX Y_MIN Y_MAX Z_MIN Z_MAX
   Soft axis limits. Define them to your machine's size relative to what your
@@ -127,7 +127,7 @@
   Order (and number) of homing movements. Up to 4 homing steps are allowed.
   If you don't need even one axis just DEFINE_HOMING(none).
 */
-DEFINE_HOMING(z_negative, x_negative, y_negative)
+DEFINE_HOMING(none)
 
 /** \def ACCELERATION_REPRAP ACCELERATION_RAMPING ACCELERATION_TEMPORAL
   Choose optionally one of ACCELERATION_REPRAP, ACCELERATION_RAMPING or
@@ -206,7 +206,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
   One can't use USE_INTERNAL_PULLUPS and USE_INTERNAL_PULLDOWNS at the same
   time, of course.
 */
-//#define USE_INTERNAL_PULLUPS
+#define USE_INTERNAL_PULLUPS
 
 /** \def USE_INTERNAL_PULLDOWNS
 
@@ -238,7 +238,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
 
     Unit: degree Celsius
 */
-#define TEMP_HYSTERESIS          10
+#define TEMP_HYSTERESIS          8
 
 /** \def TEMP_RESIDENCY_TIME
   Actual temperature must be close to target (within set temperature
@@ -247,7 +247,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
 
     Unit: seconds
 */
-#define TEMP_RESIDENCY_TIME      60
+#define TEMP_RESIDENCY_TIME      5
 
 /** \def TEMP_EWMA
 
@@ -269,7 +269,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
   With this disabled, only temps will be returned: ok T:xxx.x B:xxx.x
   Enabling adds 78 bytes to the image.
 */
-//#define REPORT_TARGET_TEMPS
+#define REPORT_TARGET_TEMPS
 
 /** \def HEATER_SANITY_CHECK
   Check if heater responds to changes in target temperature, disable and spit
@@ -301,7 +301,7 @@ DEFINE_HOMING(z_negative, x_negative, y_negative)
 /** \def BANG_BANG_OFF
   PWM value for Bang Bang 'off'.
 */
-#define BANG_BANG_OFF            40
+#define BANG_BANG_OFF            0
 
 /** \def MOVEBUFFER_SIZE
   Move buffer size, in number of moves.
